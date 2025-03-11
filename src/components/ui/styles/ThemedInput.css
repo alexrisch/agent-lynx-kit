@@ -1,0 +1,20 @@
+/* Light mode styles (default) */
+.input {
+  /* width: 100%; */
+  margin-left: 25px;
+  margin-right: 10px;
+  padding-left: 10px;
+  /* padding: 10px 12px; */
+  border: 1px solid var(--color-text);
+  border-radius: 8px;
+  font-size: 16px;
+  color: var(--color-text);
+  background: var(--background-text);
+  outline: none;
+  height: 50px;
+  width: 200px;
+}
+
+.input:focus {
+  box-shadow: 0 0 4px rgba(0, 123, 255, 0.4);
+}

@@ -1,0 +1,33 @@
+{
+  "name": "agent-lynx-kit",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "build": "rspeedy build",
+    "check": "biome check --write",
+    "dev": "rspeedy dev",
+    "format": "biome format --write",
+    "preview": "rspeedy preview",
+    "package:ios": "ios/bundle_install.sh"
+  },
+  "dependencies": {
+    "@lynx-js/react": "^0.105.0",
+    "@tanstack/react-query": "^5.67.2",
+    "axios": "^1.8.2",
+    "jotai": "^2.12.2",
+    "react-native-uuid": "^2.0.3"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^1.9.4",
+    "@lynx-js/qrcode-rsbuild-plugin": "^0.3.3",
+    "@lynx-js/react-rsbuild-plugin": "^0.9.0",
+    "@lynx-js/rspeedy": "^0.8.2",
+    "@lynx-js/types": "^3.2.0",
+    "@types/react": "^18.3.18",
+    "typescript": "~5.7.3"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "private": true
+}

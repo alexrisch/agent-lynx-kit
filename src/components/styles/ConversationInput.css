@@ -1,0 +1,20 @@
+.Container {
+  display: flex;
+  /* flex: 1; */
+  flex-direction: row;
+  /* justify-content: center; */
+  align-items: center;
+  padding-right: 10px;
+}
+
+.Input {
+  display: flex;
+  flex: 1;
+}
+
+.SendIcon {
+  transform: rotate(90deg);
+  /* transform: "rotate(90deg)"; */
+  width: 25px;
+  height: 25px;
+}

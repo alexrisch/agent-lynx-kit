@@ -1,0 +1,110 @@
+PODS:
+  - DebugRouter (5.0.6-alpha.2):
+    - DebugRouter/Framework (= 5.0.6-alpha.2)
+    - DebugRouter/Native (= 5.0.6-alpha.2)
+    - DebugRouter/third_party (= 5.0.6-alpha.2)
+  - DebugRouter/Framework (5.0.6-alpha.2):
+    - DebugRouter/Native
+    - SocketRocket (= 0.6.0)
+  - DebugRouter/Native (5.0.6-alpha.2):
+    - DebugRouter/third_party
+  - DebugRouter/third_party (5.0.6-alpha.2):
+    - DebugRouter/third_party/jsoncpp (= 5.0.6-alpha.2)
+  - DebugRouter/third_party/jsoncpp (5.0.6-alpha.2)
+  - libwebp (1.5.0):
+    - libwebp/demux (= 1.5.0)
+    - libwebp/mux (= 1.5.0)
+    - libwebp/sharpyuv (= 1.5.0)
+    - libwebp/webp (= 1.5.0)
+  - libwebp/demux (1.5.0):
+    - libwebp/webp
+  - libwebp/mux (1.5.0):
+    - libwebp/demux
+  - libwebp/sharpyuv (1.5.0)
+  - libwebp/webp (1.5.0):
+    - libwebp/sharpyuv
+  - Lynx/Framework (3.2.0-rc.0):
+    - Lynx/ReleaseResource
+    - PrimJS/napi/env
+    - PrimJS/napi/jsc
+    - PrimJS/napi/quickjs
+    - PrimJS/quickjs
+  - Lynx/ReleaseResource (3.2.0-rc.0)
+  - OCMock (3.9.1)
+  - PrimJS/log (2.11.1-rc.1)
+  - PrimJS/napi (2.11.1-rc.1):
+    - PrimJS/napi/core (= 2.11.1-rc.1)
+    - PrimJS/napi/env (= 2.11.1-rc.1)
+    - PrimJS/napi/jsc (= 2.11.1-rc.1)
+    - PrimJS/napi/quickjs (= 2.11.1-rc.1)
+  - PrimJS/napi/core (2.11.1-rc.1)
+  - PrimJS/napi/env (2.11.1-rc.1):
+    - PrimJS/napi/core
+  - PrimJS/napi/jsc (2.11.1-rc.1):
+    - PrimJS/log
+    - PrimJS/napi/core
+    - PrimJS/quickjs
+  - PrimJS/napi/quickjs (2.11.1-rc.1):
+    - PrimJS/napi/core
+    - PrimJS/quickjs
+  - PrimJS/quickjs (2.11.1-rc.1):
+    - PrimJS/log
+  - SDWebImage (5.15.5):
+    - SDWebImage/Core (= 5.15.5)
+  - SDWebImage/Core (5.15.5)
+  - SDWebImageWebPCoder (0.11.0):
+    - libwebp (~> 1.0)
+    - SDWebImage/Core (~> 5.15)
+  - SocketRocket (0.6.0)
+  - XcodeCoverage (1.4.0)
+
+DEPENDENCIES:
+  - DebugRouter (= 5.0.6-alpha.2)
+  - Lynx/Framework (= 3.2.0-rc.0)
+  - OCMock (from `https://github.com/erikdoe/ocmock.git`, tag `v3.9.1`)
+  - PrimJS/napi (= 2.11.1-rc.1)
+  - PrimJS/quickjs (= 2.11.1-rc.1)
+  - SDWebImage (= 5.15.5)
+  - SDWebImageWebPCoder (= 0.11.0)
+  - XcodeCoverage (from `https://github.com/jonreid/XcodeCoverage.git`, tag `v1.4.0`)
+
+SPEC REPOS:
+  trunk:
+    - DebugRouter
+    - libwebp
+    - Lynx
+    - PrimJS
+    - SDWebImage
+    - SDWebImageWebPCoder
+    - SocketRocket
+
+EXTERNAL SOURCES:
+  OCMock:
+    :git: https://github.com/erikdoe/ocmock.git
+    :tag: v3.9.1
+  XcodeCoverage:
+    :git: https://github.com/jonreid/XcodeCoverage.git
+    :tag: v1.4.0
+
+CHECKOUT OPTIONS:
+  OCMock:
+    :git: https://github.com/erikdoe/ocmock.git
+    :tag: v3.9.1
+  XcodeCoverage:
+    :git: https://github.com/jonreid/XcodeCoverage.git
+    :tag: v1.4.0
+
+SPEC CHECKSUMS:
+  DebugRouter: 42c2f4c40ad7a7999678deff1b19c46b81845998
+  libwebp: 02b23773aedb6ff1fd38cec7a77b81414c6842a8
+  Lynx: c968a6a6f30244301d9a335546357f6a6645274e
+  OCMock: 9491e4bec59e0b267d52a9184ff5605995e74be8
+  PrimJS: 885fcd3ab6c88039fb6eef0c8c6dd379995cf567
+  SDWebImage: fd7e1a22f00303e058058278639bf6196ee431fe
+  SDWebImageWebPCoder: 295a6573c512f54ad2dd58098e64e17dcf008499
+  SocketRocket: fccef3f9c5cedea1353a9ef6ada904fde10d6608
+  XcodeCoverage: 443974d56f4f83c759f8850a6285561361e3e79b
+
+PODFILE CHECKSUM: 7290a47f2c8a9cf3481f65cad556cb5cc6ae93c0
+
+COCOAPODS: 1.16.2

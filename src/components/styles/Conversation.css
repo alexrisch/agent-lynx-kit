@@ -1,0 +1,35 @@
+.AiMessage {
+  align-self: flex-start;
+  border-width: 1px;
+  border-color: black;
+  max-width: 80%;
+  background-color: #e5e7eb;
+}
+
+.AiMessageText {
+  color: black;
+}
+
+.HumanMessage {
+  background-color: #3b82f6;
+  align-self: flex-end;
+  max-width: 80%;
+}
+
+.HumanMessageText {
+  color: white;
+}
+
+.Message {
+  margin: 8px;
+  padding: 8px;
+  border-radius: 8px;
+}
+
+.Content {
+  display: flex;
+  flex-grow: 1;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
