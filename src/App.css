@@ -1,0 +1,121 @@
+.theme-light {
+  --background-color: #fff;
+  --color-text: #11181c;
+  background-color: var(--background-color);
+  color: var(--color-text);
+}
+
+.theme-dark {
+  --background-color: #151718;
+  --color-text: #ecedee;
+  background-color: #151718;
+  color: #ecedee;
+}
+
+.Page {
+  min-width: 100vw;
+  min-height: 100vh;
+  padding-top: 60px;
+  padding-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.App {
+  position: relative;
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+text {
+  color: var(--color-text);
+}
+
+.Banner {
+  flex: 5;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+}
+
+.Logo {
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 8px;
+}
+
+.Logo--react {
+  width: 100px;
+  height: 100px;
+  animation: Logo--spin infinite 20s linear;
+}
+
+.Logo--lynx {
+  width: 100px;
+  height: 100px;
+  animation: Logo--shake infinite 0.5s ease;
+}
+
+@keyframes Logo--spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes Logo--shake {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.9);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.Content {
+  display: flex;
+  flex-grow: 1;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.Arrow {
+  width: 24px;
+  height: 24px;
+}
+
+.Title {
+  font-size: 36px;
+  font-weight: 700;
+}
+
+.Subtitle {
+  font-style: italic;
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.Description {
+  font-size: 20px;
+  color: rgba(255, 255, 255, 0.85);
+  margin: 15rpx;
+}
+
+.Hint {
+  font-size: 12px;
+  margin: 5px;
+  color: rgba(255, 255, 255, 0.65);
+}
