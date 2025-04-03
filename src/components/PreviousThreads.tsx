@@ -35,7 +35,7 @@ export function PreviousThreads() {
       {previousThreads.map(thread => {
         return (
           <view key={thread} bindtap={onPress(thread)} className={`itemContainer`}>
-            <ThemedText>
+            <ThemedText text-maxline={'1'}>
               {thread}
             </ThemedText>
           </view>

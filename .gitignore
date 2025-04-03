@@ -17,3 +17,5 @@ ios/build/
 *.lynx.bundle
 
 .bundle/*
+
+/src/lynx/

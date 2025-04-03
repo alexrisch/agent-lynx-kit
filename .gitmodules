@@ -1,0 +1,3 @@
+[submodule "src/lynx"]
+	path = src/lynx
+	url = https://github.com/lynx-family/lynx.git

@@ -46,7 +46,6 @@ const sendMessageFunction = async (threadId: string, input: string) => {
   );
 
   const newMessage = await response.json();
-  console.log("here111132", newMessage)
   addMessageToThreadQuery(threadId, newMessage);
 };
 

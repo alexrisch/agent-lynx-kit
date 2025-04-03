@@ -1,7 +1,9 @@
+import { useEffect, useRef } from 'react';
 import { useSendMessageMutation } from '../queries/useSendMessageMutation.js';
 import type { ChatMessage } from '../types.js';
 import { ConversationInput } from './ConversationInput.jsx';
 import './styles/Conversation.css';
+import type { NodesRef } from '@lynx-js/types';
 
 type ConversationProps = {
   threadId: string;
@@ -12,10 +14,32 @@ export function Conversation({ messages, threadId }: ConversationProps) {
 
   const { mutateAsync, isPending } = useSendMessageMutation(threadId);
 
+  const scrollRef = useRef<NodesRef>(null)
+
+  useEffect(() => {
+
+    lynx.createSelectorQuery()
+      .select('#message-list')
+      .invoke({
+        method: 'scrollToPosition',
+        params: {
+          position: messages.length - 1,
+          offset: 0,
+          alignTo: 'top',
+          smooth: true,
+        },
+        success: function (res) { },
+        fail: function (res) { },
+      })
+      .exec();
+  }, [messages.length])
+
   return (
     <view className="Content">
       <view style={{ flex: 1, height: '100%', width: '100%', marginLeft: 20, marginRight: 20, }}>
         <list
+          id={'message-list'}
+          ref={scrollRef}
           className="list"
           list-type="single"
           scroll-orientation="vertical"
@@ -46,8 +70,8 @@ export function Conversation({ messages, threadId }: ConversationProps) {
           })}
         </list>
       </view>
-      <view style={{width: '100%'}}>
-      <ConversationInput onSend={mutateAsync} sending={isPending} />
+      <view style={{ width: '100%' }}>
+        <ConversationInput onSend={mutateAsync} sending={isPending} />
       </view>
     </view>
   );

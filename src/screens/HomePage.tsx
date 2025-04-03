@@ -15,10 +15,11 @@ export function HomePage() {
     uuid.v4()
   );
 
-  useOnScreenFocus("Home", () => {
+  useOnScreenFocus("Home", useCallback(() => {
+    console.log("here1111 screen focus home")
     // @ts-ignore
     setThreadId(uuid.v4());
-  });
+  }, []));
 
   const { data } = useHomeThreadQuery(threadId);
   const { mutateAsync, isPending } = useSendMessageMutation(threadId);

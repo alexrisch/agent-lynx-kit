@@ -1,30 +1,48 @@
+
 enum StorageKeys {
   AGENT = 'SAVED_AGENT',
   MODEL = 'SAVED_MODEL',
   PREVIOUS_THREADS = 'PREVIOUS_THREADS_',
 }
 
-export const getPersistedAgent = async (): Promise<string | null> => {
-  return null;
+const setStorage = (key: StorageKeys, value: string) => {
+  NativeModules.NativeLocalStorageModule.setStorageItem(
+    key,
+    value,
+  );
 };
 
-export const setPersistedAgent = async (agent: string) => {
-  return;
+const getStorage = (key: StorageKeys) => {
+  const value = NativeModules.NativeLocalStorageModule.getStorageItem("testKey");
+  return value;
 };
 
-export const getPersistedModel = async (): Promise<string | null> => {
-  return null;
+export const getPersistedAgent = (): string | null => {
+  return getStorage(StorageKeys.AGENT)
 };
 
-export const setPersistedModel = async (model: string) => {
-  return;
+export const setPersistedAgent = (agent: string) => {
+  setStorage(StorageKeys.AGENT, agent)
 };
 
-export const getPersistedPreviousThreads = async (): Promise<string[]> => {
-  return ['c0e203da-f408-4534-90ec-e0ca0da5f651'];
+export const getPersistedModel = (): string | null => {
+  return getStorage(StorageKeys.MODEL)
 };
 
-export const addNewPersistedPreviousThreads = async (newThreadId: string) => {
-  // Implement
-  return;
+export const setPersistedModel = (model: string) => {
+  setStorage(StorageKeys.MODEL, model)
+};
+
+export const getPersistedPreviousThreads = (): string[] => {
+  const persistedThreads = getStorage(StorageKeys.PREVIOUS_THREADS)
+  if (!persistedThreads) {
+    return [];
+  }
+  return JSON.parse(persistedThreads);
+};
+
+export const addNewPersistedPreviousThreads = (newThreadId: string) => {
+  const threads = getPersistedPreviousThreads();
+  threads.push(newThreadId);
+  return threads;
 };

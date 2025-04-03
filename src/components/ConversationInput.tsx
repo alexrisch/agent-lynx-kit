@@ -1,6 +1,6 @@
 import { ThemedInput } from './ui/ThemedInput.jsx';
 import './styles/ConversationInput.css';
-import { useState } from '@lynx-js/react';
+import { useState, useEffect } from '@lynx-js/react';
 import arrow from '../assets/arrow.png';
 
 type ConversationInputProps = {
@@ -10,14 +10,19 @@ type ConversationInputProps = {
 
 export function ConversationInput({ onSend, sending }: ConversationInputProps) {
   const [input, setInput] = useState('');
+  const [isAnimating, setIsAnimating] = useState(false);
 
   const handleSend = () => {
     onSend(input);
     setInput('');
   };
 
+  useEffect(() => {
+    setIsAnimating(true);
+  }, [])
+
   return (
-    <view className="Container">
+    <view className={`Container ${isAnimating ? "fade-in-up" : ""}`}>
       <ThemedInput
         className="Input"
         value={input}
